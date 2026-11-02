@@ -1,0 +1,7 @@
+db.sqlite3
+.venv
+script-backup.js
+index-backup.html
+apps.txt
+__pycache__/
+*.py[cod]

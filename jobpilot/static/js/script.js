@@ -305,6 +305,8 @@ form.addEventListener("submit", function(event) {
 
     const company = document.getElementById("company").value.trim();
     const position = document.getElementById("position").value.trim();
+    const applicationDate = document.getElementById("application-date").value;
+    const applicationStatus = document.getElementById("application-status").value;
 
     if (!company || !position) {
         alert("Please enter the company name and job title.");
@@ -315,8 +317,8 @@ form.addEventListener("submit", function(event) {
         id: crypto.randomUUID(),
         company,
         position,
-        date: today(),
-        status: "Applied",
+        date: applicationDate || today(),
+        status: applicationStatus || "Applied",
         responseDate: "",
         cvVersion: "",
         coverLetterVersion: "",
